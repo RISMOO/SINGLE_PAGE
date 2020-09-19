@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+          <b-navbar type="dark" variant="dark">
+    <b-navbar-brand href="#">Rismo</b-navbar-brand>
+
+
+      <b-navbar-nav >
+        <b-nav-item href="/">Accueil</b-nav-item>
+        <b-nav-item href="/about">A propos</b-nav-item>
+      
+      </b-navbar-nav>
+   
+  </b-navbar>
+    <div class="container">
+    <router-view></router-view><!-- router se charge de recuperere le composant-->
+  
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default {               //components:declaration des composants a utiliser
+  name: 'App',                 //data:declaration des variables
+                  //mounted: code a executer au chargement du composant                          //methods:toute les fonctions necessaires pour l'execution de mon composant
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
